@@ -26,5 +26,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECREY_ACCESS_KEY }}
 
       - name: s3 기존 파일들 전체 삭제
-        run: |
-          aws s3 rm --recursive s3://3day-practice
+        run: aws s3 rm --recursive s3://3day-practice
+
+      - name: 빌드 파일들 s3에 업로드
+          aws s3 cp ./dist s3://3day-practice/ --recursive
