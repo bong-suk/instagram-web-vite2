@@ -25,5 +25,5 @@ jobs:
 
       - name: GitHob Actions Secret 변수 사용해보기
         run: |
-          echo ${{SECRET.MY_NAME}}
-          echo ${{SECRET.My_Hobby}}
+          echo ${{secrets.MY_NAME}}
+          echo ${{secrets.My_Hobby}}
