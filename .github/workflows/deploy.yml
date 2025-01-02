@@ -4,3 +4,10 @@ on:
   push:
     branches:
       - main
+
+jobs:
+  My-deploy-Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world 출력하기
+        run: echo "Hello, world!"
